@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Shadow Mapping</title>
+    <meta charset="UTF-8">
+    <script src="glMatrix-0.9.5.min.js"></script>
+    
+    <link rel="shortcut icon" href="./texture_and_other_files/favicon.png" type="image/svg+xml">
+    <style>
+        body {
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; 
+            height: 100vh; 
+            margin: 0; 
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            display: flex; 
+            padding-top: 8px;
+            align-items: flex-start; 
+        }
+
+        canvas {
+            border: black 2px solid; 
+            margin-right: 20px;
+        }
+
+        div {
+            text-align: center; 
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; 
+            color: white; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+        
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        button:active {
+            background-color: #3e8e41; 
+            box-shadow: 0 5px #666; 
+            transform: translateY(4px); 
+        }
+
+        #stopButton {
+            background-color: #f44336; 
+        }
+
+        #stopButton:hover {
+            background-color: #e41b13; 
+        }
+
+        /* Style for the slider and checkbox */
+        .control-container {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .control-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .control-container input[type="range"] {
+            width: 200px;
+        }
+
+        .control-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="assignment3" width="700" height="700"></canvas>
+        
+        <div>
+            <button id="changeViewButton">CHANGE VIEW</button>
+            <button id="topViewButton">TOP VIEW</button> 
+            <button id="resetButton">RESET</button>
+
+            <div class="control-container">
+                <label>
+                    <input type="checkbox" id="animateCheckbox"> Animate Camera Rotation
+                </label>
+                <label>
+                    Light X Position:
+                    <input type="range" id="lightXSlider" min="-10" max="10" step="0.1" value="3.5">
+                </label>
+            </div>
+        </div>  
+    </div>
+
+    <!-- Include main.js once after glMatrix is loaded -->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
