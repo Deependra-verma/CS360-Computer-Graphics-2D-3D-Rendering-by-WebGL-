@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Shaders</title>
+    <script src="glMatrix-0.9.5.min.js"></script>
+    <script src="ass2.js"></script>
+    <style>
+        body {
+            margin: 50px;
+        }
+        .slider-class {
+            margin-top: 20px;
+        }
+        .slider {
+            width: 300px;
+            margin: 10px;
+        }
+        .button {
+            float: right;
+            margin-top: -65px;
+            margin-left: 590%;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 24px;
+            box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+            color: #3c4043;
+            cursor: pointer;
+            display: inline-flex;
+            font-size: 14px;
+            height: 48px;
+            justify-content: center;
+            padding: 2px 24px;
+            width: auto;
+        }
+        .button:hover {
+            background: #F6F9FE;
+            color: #154ba2;
+        }
+    </style>
+</head>
+<body onload="webGLStart();">
+    <canvas id="Assignment_2" style="border: none" width="1550" height="500"></canvas>
+
+    <div class="slider-class">
+        <b>Control Light Position :</b>
+        <input type="range" class="slider" id="light-slider" min="-15.0" max="15.0" step="1.0" value="3.0">
+        <br />
+        <b>Control Camera Zoom :</b>
+        <input type="range" class="slider" id="camera-slider" min="0.0" max="15.0" step="1.0" value="2.0">
+        </div>
+        <button class="button" onClick="window.location.reload();">Reset</button>
+</body>
+</html>
